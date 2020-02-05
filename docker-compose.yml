@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  serverless:
+    image: node:12
+    entrypoint: []
+    env_file: .env
+    working_dir: /work
+    volumes:
+      - ~/.aws:/root/.aws
+      - ~/.ssh:/root/.ssh
+      - .:/work
